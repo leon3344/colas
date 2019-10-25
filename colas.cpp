@@ -21,11 +21,11 @@ void encolar( struct cola &q, int valor )
      aux->sgte = NULL;
      
      if( q.delante == NULL)
-         q.delante = aux;   // encola el primero elemento
+         q.delante = aux;   
      else
          (q.atras)->sgte = aux;
          
-     q.atras = aux;        // puntero que siempre apunta al ultimo elemento
+     q.atras = aux;       
 }    
 
 	int desencolar( struct cola &q )
@@ -34,10 +34,10 @@ void encolar( struct cola &q, int valor )
      int num ;
      struct nodo *aux ;
      
-     aux = q.delante;      // aux apunta al inicio de la cola
+     aux = q.delante;      
      num = aux->nro;
      q.delante = (q.delante)->sgte;
-     delete(aux);          // libera memoria a donde apuntaba aux
+     delete(aux);          
      
      return num;
 } 
@@ -90,9 +90,9 @@ int main()
     q.atras   = NULL;
    
    
-    int dato;  // numero a encolar
-    int op;    // opcion del menu
-    int x ;    // numero que devuelve la funcon pop
+    int dato; 
+    int op;    
+    int x ;    
    
    
  
